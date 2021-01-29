@@ -31,6 +31,8 @@ java:
 	mv -f $(PREFIX)_wrap.cxx ../java
 #	rm -fr exception.java SWIGTYPE_*.java
 	mv -f *.java ../java/org/chasen/mecab
-	
-	
+
+lua:
+	$(SWIG) -lua -c++ $(PREFIX).i
+	mv -f $(PREFIX)_wrap.cxx ../lua
 
